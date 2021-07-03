@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Stylesheets/home.css">
+</head>
+<body class="bg-dark text-white d-flex text-center">
+    <div class="cover-container d-flex flex-column w-100 h-100 p-3 mx-auto">
+        <div id="links" class="mb-auto">
+            <h3 class="float-md-left">YelpCamp</h3>
+            <nav class="float-md-right justify-content-center">
+                
+                <a href="/index" class="active">Campground</a>
+                <%if(!currentUser){%>
+                <a href="/login">Login</a>
+                <a href="/register">Signup</a>
+                <%}else{%>
+                <a href="/logout">Logout</a>
+                <%}%>
+            </nav>
+        </div>
+        <div id="content" class="p-4">
+            <h1>YelpCamp</h1>
+            <p class="lead">
+                <b>Welcome to Yelpcamp</b><br>
+                Jump right into camping world! Visit the campgrounds that fascinated people across the world. Create your own camp too :)
+            </p>
+            <a href="/index" class="btn btn-outline-light btn-lg">Visit Camps</a>
+        </div>
+        <footer class='mt-auto'><p>&copy 2021</p></footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</body>
+</html>
